@@ -1,0 +1,1579 @@
+{
+  "effects": [
+    {
+      "name": "Laser beam 5 magic",
+      "pack": "3D Lasers Pack",
+      "kind": "particle-system",
+      "file": "3D Lasers Pack/Laser beam 5 magic/Laser beam 5 magic.fx.json",
+      "source": "3D Lasers Pack/Prefabs/Laser beam 5 magic.prefab",
+      "looping": true,
+      "duration": 3,
+      "playTime": 1.1,
+      "fadeTime": 1,
+      "systems": [
+        {
+          "name": "Laser beam 5 magic",
+          "capacity": 1,
+          "output": "beam"
+        },
+        {
+          "name": "Flash",
+          "capacity": 1000,
+          "output": "billboard"
+        },
+        {
+          "name": "Hit",
+          "capacity": 1000,
+          "output": "billboard"
+        },
+        {
+          "name": "SparksBlack",
+          "capacity": 2000,
+          "output": "billboard"
+        },
+        {
+          "name": "Trails",
+          "capacity": 1000,
+          "output": "stretched"
+        },
+        {
+          "name": "Flare",
+          "capacity": 1000,
+          "output": "billboard"
+        },
+        {
+          "name": "Darkness",
+          "capacity": 1000,
+          "output": "billboard"
+        },
+        {
+          "name": "Halo",
+          "capacity": 1000,
+          "output": "billboard"
+        },
+        {
+          "name": "Fire",
+          "capacity": 1000,
+          "output": "billboard"
+        },
+        {
+          "name": "Shockwave",
+          "capacity": 1000,
+          "output": "billboard"
+        }
+      ],
+      "params": [],
+      "lights": 0,
+      "files": [
+        "Trail6.png",
+        "Noise13b.png",
+        "Point5.png",
+        "Point12.png",
+        "Point19.png",
+        "Flare4.png",
+        "Smoke.png",
+        "MaskForShader.png",
+        "Fire3.png",
+        "Noise34.png"
+      ],
+      "problems": [
+        "HS_Blend_CG: triplanar sampling is approximated by a top-down projection",
+        "HS_Blend_CG: soft particles are drawn without the depth fade",
+        "emission by distance travelled is not simulated (the effect does not move)",
+        "world collisions use a ground plane at the effect origin (y = 0)",
+        "Laser beam 5 magic: a 30 m beam with its hit effect at the end; games set the end with setBeamEnd()"
+      ]
+    },
+    {
+      "name": "Blood_Burst_Directional_L green",
+      "pack": "FXVille_BloodPack",
+      "kind": "particle-system",
+      "file": "FXVille_BloodPack/Blood_Burst_Directional_L/Blood_Burst_Directional_L green.fx.json",
+      "source": "FXVille_BloodPack/Effect Prefabs/Blood_Burst_Directional_L.prefab",
+      "looping": false,
+      "duration": 3,
+      "playTime": 2.5,
+      "fadeTime": 1.5,
+      "systems": [
+        {
+          "name": "Blood_Burst_Directional_L",
+          "capacity": 1000,
+          "output": "none"
+        },
+        {
+          "name": "Spurt",
+          "capacity": 1000,
+          "output": "stretched"
+        },
+        {
+          "name": "Burst",
+          "capacity": 1000,
+          "output": "billboard"
+        },
+        {
+          "name": "Drops",
+          "capacity": 1000,
+          "output": "stretched"
+        }
+      ],
+      "params": [],
+      "lights": 0,
+      "files": [
+        "T_BloodSpray_Mask.png",
+        "T_Blood_Noise_H.png",
+        "T_Blood_Noise_N.png",
+        "T_Reflection02.png",
+        "T_UVWarp_Noise.png",
+        "T_BloodBurst_Mask.png",
+        "T_SwirlWarp.png",
+        "T_UVWarp_Noise_N.png"
+      ],
+      "problems": [],
+      "variantOf": "Blood_Burst_Directional_L",
+      "recolor": "green"
+    },
+    {
+      "name": "Blood_Burst_Omni_L green",
+      "pack": "FXVille_BloodPack",
+      "kind": "particle-system",
+      "file": "FXVille_BloodPack/Blood_Burst_Omni_L/Blood_Burst_Omni_L green.fx.json",
+      "source": "FXVille_BloodPack/Effect Prefabs/Blood_Burst_Omni_L.prefab",
+      "looping": false,
+      "duration": 3,
+      "playTime": 2.3,
+      "fadeTime": 1.3,
+      "systems": [
+        {
+          "name": "Blood_Burst_Omni_L",
+          "capacity": 1000,
+          "output": "none"
+        },
+        {
+          "name": "Spray",
+          "capacity": 1000,
+          "output": "billboard"
+        },
+        {
+          "name": "Spurt",
+          "capacity": 1000,
+          "output": "stretched"
+        },
+        {
+          "name": "Burst",
+          "capacity": 1000,
+          "output": "billboard"
+        },
+        {
+          "name": "Drops",
+          "capacity": 1000,
+          "output": "stretched"
+        }
+      ],
+      "params": [],
+      "lights": 0,
+      "files": [
+        "T_Blood_Mist_Mask.png",
+        "T_Droplet_Noise_H.png",
+        "T_Droplet_Noise_N.png",
+        "T_Reflection03.png",
+        "T_SwirlWarp.png",
+        "T_BloodSpray_Mask.png",
+        "T_Blood_Noise_H.png",
+        "T_Blood_Noise_N.png",
+        "T_Reflection02.png",
+        "T_UVWarp_Noise.png",
+        "T_BloodBurst_Mask.png",
+        "T_UVWarp_Noise_N.png"
+      ],
+      "problems": [],
+      "variantOf": "Blood_Burst_Omni_L",
+      "recolor": "green"
+    },
+    {
+      "name": "Blood_Burst_Omni_M green",
+      "pack": "FXVille_BloodPack",
+      "kind": "particle-system",
+      "file": "FXVille_BloodPack/Blood_Burst_Omni_M/Blood_Burst_Omni_M green.fx.json",
+      "source": "FXVille_BloodPack/Effect Prefabs/Blood_Burst_Omni_M.prefab",
+      "looping": false,
+      "duration": 3,
+      "playTime": 2,
+      "fadeTime": 1,
+      "systems": [
+        {
+          "name": "Blood_Burst_Omni_M",
+          "capacity": 1000,
+          "output": "none"
+        },
+        {
+          "name": "Spurt",
+          "capacity": 1000,
+          "output": "stretched"
+        },
+        {
+          "name": "Burst",
+          "capacity": 1000,
+          "output": "billboard"
+        },
+        {
+          "name": "Drops",
+          "capacity": 1000,
+          "output": "stretched"
+        },
+        {
+          "name": "Spray",
+          "capacity": 1000,
+          "output": "billboard"
+        }
+      ],
+      "params": [],
+      "lights": 0,
+      "files": [
+        "T_BloodSpray_Mask.png",
+        "T_Blood_Noise_H.png",
+        "T_Blood_Noise_N.png",
+        "T_Reflection02.png",
+        "T_UVWarp_Noise.png",
+        "T_BloodBurst_Mask.png",
+        "T_SwirlWarp.png",
+        "T_UVWarp_Noise_N.png",
+        "T_Blood_Mist_Mask.png",
+        "T_Droplet_Noise_H.png",
+        "T_Droplet_Noise_N.png",
+        "T_Reflection03.png"
+      ],
+      "problems": [],
+      "variantOf": "Blood_Burst_Omni_M",
+      "recolor": "green"
+    },
+    {
+      "name": "Blood_Burst_Omni_S green",
+      "pack": "FXVille_BloodPack",
+      "kind": "particle-system",
+      "file": "FXVille_BloodPack/Blood_Burst_Omni_S/Blood_Burst_Omni_S green.fx.json",
+      "source": "FXVille_BloodPack/Effect Prefabs/Blood_Burst_Omni_S.prefab",
+      "looping": false,
+      "duration": 3,
+      "playTime": 2,
+      "fadeTime": 1,
+      "systems": [
+        {
+          "name": "Blood_Burst_Omni_S",
+          "capacity": 1000,
+          "output": "none"
+        },
+        {
+          "name": "Burst",
+          "capacity": 1000,
+          "output": "billboard"
+        },
+        {
+          "name": "Drops",
+          "capacity": 1000,
+          "output": "stretched"
+        }
+      ],
+      "params": [],
+      "lights": 0,
+      "files": [
+        "T_BloodBurst_Mask.png",
+        "T_Blood_Noise_H.png",
+        "T_Blood_Noise_N.png",
+        "T_Reflection02.png",
+        "T_SwirlWarp.png",
+        "T_UVWarp_Noise.png",
+        "T_UVWarp_Noise_N.png"
+      ],
+      "problems": [],
+      "variantOf": "Blood_Burst_Omni_S",
+      "recolor": "green"
+    },
+    {
+      "name": "Blood_Slice_Omni_M green",
+      "pack": "FXVille_BloodPack",
+      "kind": "particle-system",
+      "file": "FXVille_BloodPack/Blood_Slice_Omni_M/Blood_Slice_Omni_M green.fx.json",
+      "source": "FXVille_BloodPack/Effect Prefabs/Blood_Slice_Omni_M.prefab",
+      "looping": false,
+      "duration": 3,
+      "playTime": 2.3,
+      "fadeTime": 1.3,
+      "systems": [
+        {
+          "name": "Blood_Slice_Omni_M",
+          "capacity": 1000,
+          "output": "none"
+        },
+        {
+          "name": "Spray",
+          "capacity": 1000,
+          "output": "billboard"
+        },
+        {
+          "name": "Burst",
+          "capacity": 1000,
+          "output": "billboard"
+        },
+        {
+          "name": "Drops",
+          "capacity": 1000,
+          "output": "stretched"
+        },
+        {
+          "name": "Slice Plane",
+          "capacity": 1000,
+          "output": "mesh"
+        }
+      ],
+      "params": [],
+      "lights": 0,
+      "files": [
+        "T_Blood_Mist_Mask.png",
+        "T_Droplet_Noise_H.png",
+        "T_Droplet_Noise_N.png",
+        "T_Reflection03.png",
+        "T_SwirlWarp.png",
+        "T_BloodBurst_Mask.png",
+        "T_Blood_Noise_H.png",
+        "T_Blood_Noise_N.png",
+        "T_Reflection02.png",
+        "T_UVWarp_Noise.png",
+        "T_UVWarp_Noise_N.png",
+        "T_Blood_Arc_Mask.png",
+        "SM_CurvedPlane-curved_doubleSided_plane.mesh.json"
+      ],
+      "problems": [],
+      "variantOf": "Blood_Slice_Omni_M",
+      "recolor": "green"
+    },
+    {
+      "name": "Explosion1",
+      "pack": "Hovl Studio",
+      "kind": "particle-system",
+      "file": "Hovl Studio/Explosion1/Explosion1.fx.json",
+      "source": "Hovl Studio/3D Fire and Explosions/Prefabs/Explosion1.prefab",
+      "looping": true,
+      "duration": 4,
+      "playTime": 4,
+      "fadeTime": 2,
+      "systems": [
+        {
+          "name": "Explosion1",
+          "capacity": 1000,
+          "output": "stretched"
+        },
+        {
+          "name": "Smoke",
+          "capacity": 1000,
+          "output": "billboard"
+        },
+        {
+          "name": "Fire",
+          "capacity": 1000,
+          "output": "billboard"
+        },
+        {
+          "name": "Flash",
+          "capacity": 1000,
+          "output": "billboard"
+        },
+        {
+          "name": "Rock",
+          "capacity": 1000,
+          "output": "mesh"
+        },
+        {
+          "name": "Derbis",
+          "capacity": 1000,
+          "output": "billboard"
+        },
+        {
+          "name": "Stone",
+          "capacity": 1000,
+          "output": "mesh"
+        },
+        {
+          "name": "Ground",
+          "capacity": 1000,
+          "output": "billboard"
+        },
+        {
+          "name": "Crater",
+          "capacity": 1000,
+          "output": "billboard"
+        },
+        {
+          "name": "Distortion(Delete for Mobile)",
+          "capacity": 1000,
+          "output": "none"
+        }
+      ],
+      "params": [],
+      "lights": 0,
+      "files": [
+        "Point12.png",
+        "EmberExpl2.png",
+        "Noise34.png",
+        "GroundSmoke2.png",
+        "MaskForShader.png",
+        "Rock2_Albedo.png",
+        "Rock2-Rock2.mesh.json",
+        "Stone3.png",
+        "Stone1_Albedo.png",
+        "Stone1-Stone1.mesh.json",
+        "Crater64.png"
+      ],
+      "problems": [
+        "HS_Blend_CG: triplanar sampling is approximated by a top-down projection",
+        "HS_Blend_CG: soft particles are drawn without the depth fade",
+        "HS_Explosion: soft particles are drawn without the depth fade",
+        "world collisions use a ground plane at the effect origin (y = 0)",
+        "HS_LitFresnel: custom function node \"PR\" is left out",
+        "Distortion(Delete for Mobile): distortion material DistortionSmoke18 (needs the scene behind it); not drawn"
+      ]
+    },
+    {
+      "name": "Fire1",
+      "pack": "Hovl Studio",
+      "kind": "particle-system",
+      "file": "Hovl Studio/Fire1/Fire1.fx.json",
+      "source": "Hovl Studio/3D Fire and Explosions/Prefabs/Fire1.prefab",
+      "looping": true,
+      "duration": 3.5,
+      "playTime": 3,
+      "fadeTime": 1.5,
+      "systems": [
+        {
+          "name": "Fire1",
+          "capacity": 1000,
+          "output": "billboard"
+        },
+        {
+          "name": "Sparks",
+          "capacity": 1000,
+          "output": "stretched"
+        },
+        {
+          "name": "Point Light",
+          "capacity": 1000,
+          "output": "none"
+        }
+      ],
+      "params": [],
+      "lights": 0,
+      "files": [
+        "EmberExpl5.png",
+        "Noise34.png",
+        "Point19.png"
+      ],
+      "problems": [
+        "HS_Explosion: soft particles are drawn without the depth fade",
+        "HS_Blend_CG: triplanar sampling is approximated by a top-down projection",
+        "HS_Blend_CG: soft particles are drawn without the depth fade"
+      ]
+    },
+    {
+      "name": "Fire2",
+      "pack": "Hovl Studio",
+      "kind": "particle-system",
+      "file": "Hovl Studio/Fire2/Fire2.fx.json",
+      "source": "Hovl Studio/3D Fire and Explosions/Prefabs/Fire2.prefab",
+      "looping": true,
+      "duration": 3.5,
+      "playTime": 5.5,
+      "fadeTime": 4,
+      "systems": [
+        {
+          "name": "Fire2",
+          "capacity": 1000,
+          "output": "billboard"
+        },
+        {
+          "name": "Sparks",
+          "capacity": 1000,
+          "output": "stretched"
+        },
+        {
+          "name": "Point Light",
+          "capacity": 1000,
+          "output": "none"
+        }
+      ],
+      "params": [],
+      "lights": 0,
+      "files": [
+        "EmberExpl4.png",
+        "Noise34.png",
+        "Point19.png"
+      ],
+      "problems": [
+        "HS_Explosion: soft particles are drawn without the depth fade",
+        "HS_Blend_CG: triplanar sampling is approximated by a top-down projection",
+        "HS_Blend_CG: soft particles are drawn without the depth fade"
+      ]
+    },
+    {
+      "name": "Fire4",
+      "pack": "Hovl Studio",
+      "kind": "particle-system",
+      "file": "Hovl Studio/Fire4/Fire4.fx.json",
+      "source": "Hovl Studio/3D Fire and Explosions/Prefabs/Fire4.prefab",
+      "looping": true,
+      "duration": 3.5,
+      "playTime": 3,
+      "fadeTime": 1.5,
+      "systems": [
+        {
+          "name": "Fire4",
+          "capacity": 1000,
+          "output": "billboard"
+        },
+        {
+          "name": "Point Light",
+          "capacity": 1000,
+          "output": "none"
+        }
+      ],
+      "params": [],
+      "lights": 0,
+      "files": [
+        "EmberFire1.png",
+        "Noise28.png"
+      ],
+      "problems": [
+        "HS_Explosion: soft particles are drawn without the depth fade"
+      ]
+    },
+    {
+      "name": "Fire5",
+      "pack": "Hovl Studio",
+      "kind": "particle-system",
+      "file": "Hovl Studio/Fire5/Fire5.fx.json",
+      "source": "Hovl Studio/3D Fire and Explosions/Prefabs/Fire5.prefab",
+      "looping": true,
+      "duration": 3.5,
+      "playTime": 5.5,
+      "fadeTime": 4,
+      "systems": [
+        {
+          "name": "Fire5",
+          "capacity": 1000,
+          "output": "billboard"
+        },
+        {
+          "name": "Smoke",
+          "capacity": 1000,
+          "output": "billboard"
+        },
+        {
+          "name": "Point Light",
+          "capacity": 1000,
+          "output": "none"
+        }
+      ],
+      "params": [],
+      "lights": 0,
+      "files": [
+        "EmberFire1.png",
+        "Noise28.png",
+        "EmberExpl2.png",
+        "Noise34.png"
+      ],
+      "problems": [
+        "HS_Explosion: soft particles are drawn without the depth fade"
+      ]
+    },
+    {
+      "name": "Smoke1",
+      "pack": "Hovl Studio",
+      "kind": "particle-system",
+      "file": "Hovl Studio/Smoke1/Smoke1.fx.json",
+      "source": "Hovl Studio/3D Fire and Explosions/Prefabs/Smoke1.prefab",
+      "looping": true,
+      "duration": 3.5,
+      "playTime": 5.5,
+      "fadeTime": 4,
+      "systems": [
+        {
+          "name": "Smoke1",
+          "capacity": 1000,
+          "output": "billboard"
+        }
+      ],
+      "params": [],
+      "lights": 0,
+      "files": [
+        "EmberExpl2.png",
+        "Noise34.png"
+      ],
+      "problems": [
+        "HS_Explosion: soft particles are drawn without the depth fade"
+      ]
+    },
+    {
+      "name": "Smoke2",
+      "pack": "Hovl Studio",
+      "kind": "particle-system",
+      "file": "Hovl Studio/Smoke2/Smoke2.fx.json",
+      "source": "Hovl Studio/3D Fire and Explosions/Prefabs/Smoke2.prefab",
+      "looping": true,
+      "duration": 3.5,
+      "playTime": 5.5,
+      "fadeTime": 4,
+      "systems": [
+        {
+          "name": "Smoke2",
+          "capacity": 1000,
+          "output": "billboard"
+        }
+      ],
+      "params": [],
+      "lights": 0,
+      "files": [
+        "EmberExpl2.png",
+        "Noise34.png"
+      ],
+      "problems": [
+        "HS_Explosion: soft particles are drawn without the depth fade"
+      ]
+    },
+    {
+      "name": "Smoke4",
+      "pack": "Hovl Studio",
+      "kind": "particle-system",
+      "file": "Hovl Studio/Smoke4/Smoke4.fx.json",
+      "source": "Hovl Studio/3D Fire and Explosions/Prefabs/Smoke4.prefab",
+      "looping": true,
+      "duration": 3.5,
+      "playTime": 3.5,
+      "fadeTime": 2,
+      "systems": [
+        {
+          "name": "Smoke4",
+          "capacity": 1000,
+          "output": "billboard"
+        }
+      ],
+      "params": [],
+      "lights": 0,
+      "files": [
+        "EmberExpl2.png",
+        "Noise34.png"
+      ],
+      "problems": [
+        "HS_Explosion: soft particles are drawn without the depth fade"
+      ]
+    },
+    {
+      "name": "Smoke5",
+      "pack": "Hovl Studio",
+      "kind": "particle-system",
+      "file": "Hovl Studio/Smoke5/Smoke5.fx.json",
+      "source": "Hovl Studio/3D Fire and Explosions/Prefabs/Smoke5.prefab",
+      "looping": true,
+      "duration": 3.5,
+      "playTime": 3.5,
+      "fadeTime": 2,
+      "systems": [
+        {
+          "name": "Smoke5",
+          "capacity": 1000,
+          "output": "billboard"
+        }
+      ],
+      "params": [],
+      "lights": 0,
+      "files": [
+        "EmberExpl2.png",
+        "Noise34.png"
+      ],
+      "problems": [
+        "HS_Explosion: soft particles are drawn without the depth fade"
+      ]
+    },
+    {
+      "name": "Explosion12",
+      "pack": "KriptoFX",
+      "kind": "particle-system",
+      "file": "KriptoFX/Explosion12/Explosion12.fx.json",
+      "source": "KriptoFX/Explosions/Prefabs/PC/Explosion12.prefab",
+      "looping": false,
+      "duration": 4.4,
+      "playTime": 4.8,
+      "fadeTime": 2.4,
+      "systems": [
+        {
+          "name": "HeaDistortion",
+          "capacity": 1000,
+          "output": "none"
+        },
+        {
+          "name": "Billboard",
+          "capacity": 1,
+          "output": "billboard"
+        }
+      ],
+      "params": [],
+      "lights": 1,
+      "files": [
+        "Explosion12.png"
+      ],
+      "problems": [
+        "HeaDistortion: distortion material Distortion (needs the scene behind it); not drawn"
+      ]
+    },
+    {
+      "name": "Explosion3D_3",
+      "pack": "KriptoFX",
+      "kind": "particle-system",
+      "file": "KriptoFX/Explosion3D_3/Explosion3D_3.fx.json",
+      "source": "KriptoFX/Explosions/Prefabs/PC/Explosion3D_3.prefab",
+      "looping": false,
+      "duration": 5,
+      "playTime": 6,
+      "fadeTime": 3,
+      "systems": [
+        {
+          "name": "Explosion3D_3",
+          "capacity": 1000,
+          "output": "billboard"
+        },
+        {
+          "name": "Trails1",
+          "capacity": 1000,
+          "output": "stretched"
+        },
+        {
+          "name": "Trails2",
+          "capacity": 1000,
+          "output": "stretched"
+        },
+        {
+          "name": "HeatDistortion",
+          "capacity": 1000,
+          "output": "none"
+        },
+        {
+          "name": "Sparks",
+          "capacity": 1000,
+          "output": "stretched"
+        },
+        {
+          "name": "DistortionWave",
+          "capacity": 1000,
+          "output": "none"
+        },
+        {
+          "name": "Particles",
+          "capacity": 1000,
+          "output": "billboard"
+        }
+      ],
+      "params": [],
+      "lights": 1,
+      "files": [
+        "Explosion8.png",
+        "Trail5.png",
+        "Trail4.png",
+        "ParticleTrail1.png",
+        "RandomParticlesAlpha.png"
+      ],
+      "problems": [
+        "HeatDistortion: distortion material Distortion (needs the scene behind it); not drawn",
+        "wind zones / external forces are not simulated",
+        "world collisions use a ground plane at the effect origin (y = 0)",
+        "DistortionWave: distortion material Distortion3D (needs the scene behind it); not drawn"
+      ]
+    },
+    {
+      "name": "Explosion3D_4",
+      "pack": "KriptoFX",
+      "kind": "particle-system",
+      "file": "KriptoFX/Explosion3D_4/Explosion3D_4.fx.json",
+      "source": "KriptoFX/Explosions/Prefabs/PC/Explosion3D_4.prefab",
+      "looping": false,
+      "duration": 5,
+      "playTime": 6,
+      "fadeTime": 4,
+      "systems": [
+        {
+          "name": "Explosion3D_4",
+          "capacity": 1000,
+          "output": "billboard"
+        },
+        {
+          "name": "Core",
+          "capacity": 1000,
+          "output": "billboard"
+        },
+        {
+          "name": "Core2",
+          "capacity": 1000,
+          "output": "billboard"
+        },
+        {
+          "name": "Trails1",
+          "capacity": 1000,
+          "output": "stretched"
+        },
+        {
+          "name": "Trails2",
+          "capacity": 1000,
+          "output": "stretched"
+        },
+        {
+          "name": "Sparks",
+          "capacity": 1000,
+          "output": "stretched"
+        },
+        {
+          "name": "Particles",
+          "capacity": 1000,
+          "output": "billboard"
+        },
+        {
+          "name": "HeatDistortion",
+          "capacity": 1000,
+          "output": "none"
+        },
+        {
+          "name": "DistortionWave",
+          "capacity": 1000,
+          "output": "none"
+        }
+      ],
+      "params": [],
+      "lights": 1,
+      "files": [
+        "Explosion15.png",
+        "Explosion8.png",
+        "Trail5.png",
+        "Trail4.png",
+        "ParticleTrail1.png",
+        "RandomParticlesAlpha.png"
+      ],
+      "problems": [
+        "wind zones / external forces are not simulated",
+        "world collisions use a ground plane at the effect origin (y = 0)",
+        "HeatDistortion: distortion material Distortion (needs the scene behind it); not drawn",
+        "DistortionWave: distortion material Distortion3D (needs the scene behind it); not drawn"
+      ]
+    },
+    {
+      "name": "Explosion3D_9",
+      "pack": "KriptoFX",
+      "kind": "particle-system",
+      "file": "KriptoFX/Explosion3D_9/Explosion3D_9.fx.json",
+      "source": "KriptoFX/Explosions/Prefabs/PC/Explosion3D_9.prefab",
+      "looping": false,
+      "duration": 5,
+      "playTime": 8,
+      "fadeTime": 5,
+      "systems": [
+        {
+          "name": "Explosion3D_9",
+          "capacity": 1000,
+          "output": "billboard"
+        },
+        {
+          "name": "Smoke",
+          "capacity": 1000,
+          "output": "billboard"
+        },
+        {
+          "name": "Sparks",
+          "capacity": 1000,
+          "output": "stretched"
+        },
+        {
+          "name": "Particles",
+          "capacity": 1000,
+          "output": "billboard"
+        },
+        {
+          "name": "ParticlesLight",
+          "capacity": 1000,
+          "output": "billboard"
+        },
+        {
+          "name": "HeatDistortion",
+          "capacity": 1000,
+          "output": "none"
+        }
+      ],
+      "params": [],
+      "lights": 1,
+      "files": [
+        "Explosion18.png",
+        "Explosion13.png",
+        "ParticleTrail1.png",
+        "RandomParticlesAlpha.png"
+      ],
+      "problems": [
+        "wind zones / external forces are not simulated",
+        "world collisions use a ground plane at the effect origin (y = 0)",
+        "HeatDistortion: distortion material Distortion (needs the scene behind it); not drawn"
+      ]
+    },
+    {
+      "name": "Explosion4",
+      "pack": "KriptoFX",
+      "kind": "particle-system",
+      "file": "KriptoFX/Explosion4/Explosion4.fx.json",
+      "source": "KriptoFX/Explosions/Prefabs/PC/Explosion4.prefab",
+      "looping": false,
+      "duration": 3.6,
+      "playTime": 3.2,
+      "fadeTime": 2,
+      "systems": [
+        {
+          "name": "HeaDistortion",
+          "capacity": 1000,
+          "output": "none"
+        },
+        {
+          "name": "Billboard",
+          "capacity": 1,
+          "output": "billboard"
+        }
+      ],
+      "params": [],
+      "lights": 1,
+      "files": [
+        "Explosion4.png"
+      ],
+      "problems": [
+        "HeaDistortion: distortion material Distortion (needs the scene behind it); not drawn"
+      ]
+    },
+    {
+      "name": "MobileExplosion1",
+      "pack": "KriptoFX",
+      "kind": "particle-system",
+      "file": "KriptoFX/MobileExplosion1/MobileExplosion1.fx.json",
+      "source": "KriptoFX/Explosions/Prefabs/Mobile/MobileExplosion1.prefab",
+      "looping": false,
+      "duration": 4.1,
+      "playTime": 4.2,
+      "fadeTime": 2.1,
+      "systems": [
+        {
+          "name": "Billboard",
+          "capacity": 1,
+          "output": "billboard"
+        },
+        {
+          "name": "Glow",
+          "capacity": 1,
+          "output": "billboard"
+        }
+      ],
+      "params": [],
+      "lights": 1,
+      "files": [
+        "Explosion1.png",
+        "Glow.png"
+      ],
+      "problems": []
+    },
+    {
+      "name": "MobileExplosion12",
+      "pack": "KriptoFX",
+      "kind": "particle-system",
+      "file": "KriptoFX/MobileExplosion12/MobileExplosion12.fx.json",
+      "source": "KriptoFX/Explosions/Prefabs/Mobile/MobileExplosion12.prefab",
+      "looping": false,
+      "duration": 4.4,
+      "playTime": 4.8,
+      "fadeTime": 2.4,
+      "systems": [
+        {
+          "name": "Billboard",
+          "capacity": 1,
+          "output": "billboard"
+        },
+        {
+          "name": "Glow",
+          "capacity": 1,
+          "output": "billboard"
+        }
+      ],
+      "params": [],
+      "lights": 1,
+      "files": [
+        "Explosion12.png",
+        "Glow.png"
+      ],
+      "problems": []
+    },
+    {
+      "name": "MobileExplosion3D_1",
+      "pack": "KriptoFX",
+      "kind": "particle-system",
+      "file": "KriptoFX/MobileExplosion3D_1/MobileExplosion3D_1.fx.json",
+      "source": "KriptoFX/Explosions/Prefabs/Mobile/MobileExplosion3D_1.prefab",
+      "looping": false,
+      "duration": 5.1,
+      "playTime": 6.1,
+      "fadeTime": 3,
+      "systems": [
+        {
+          "name": "MobileExplosion3D_1",
+          "capacity": 1000,
+          "output": "billboard"
+        },
+        {
+          "name": "Trails1",
+          "capacity": 1000,
+          "output": "stretched"
+        },
+        {
+          "name": "Trails2",
+          "capacity": 1000,
+          "output": "stretched"
+        },
+        {
+          "name": "Sparks",
+          "capacity": 1000,
+          "output": "stretched"
+        },
+        {
+          "name": "Particles",
+          "capacity": 1000,
+          "output": "billboard"
+        },
+        {
+          "name": "Glow",
+          "capacity": 1,
+          "output": "billboard"
+        }
+      ],
+      "params": [],
+      "lights": 1,
+      "files": [
+        "Explosion12.png",
+        "Trail2.png",
+        "Trail3.png",
+        "ParticleTrail1.png",
+        "RandomParticlesAlpha.png",
+        "Glow.png"
+      ],
+      "problems": [
+        "wind zones / external forces are not simulated",
+        "world collisions use a ground plane at the effect origin (y = 0)"
+      ]
+    },
+    {
+      "name": "MobileExplosion3D_2",
+      "pack": "KriptoFX",
+      "kind": "particle-system",
+      "file": "KriptoFX/MobileExplosion3D_2/MobileExplosion3D_2.fx.json",
+      "source": "KriptoFX/Explosions/Prefabs/Mobile/MobileExplosion3D_2.prefab",
+      "looping": false,
+      "duration": 5,
+      "playTime": 6,
+      "fadeTime": 3,
+      "systems": [
+        {
+          "name": "MobileExplosion3D_2",
+          "capacity": 1000,
+          "output": "billboard"
+        },
+        {
+          "name": "Trails1",
+          "capacity": 1000,
+          "output": "stretched"
+        },
+        {
+          "name": "Trails2",
+          "capacity": 1000,
+          "output": "stretched"
+        },
+        {
+          "name": "Particles",
+          "capacity": 1000,
+          "output": "billboard"
+        },
+        {
+          "name": "Sparks",
+          "capacity": 1000,
+          "output": "stretched"
+        },
+        {
+          "name": "Glow",
+          "capacity": 1,
+          "output": "billboard"
+        }
+      ],
+      "params": [],
+      "lights": 1,
+      "files": [
+        "Explosion9.png",
+        "Trail4.png",
+        "Trail1.png",
+        "RandomParticlesAlpha.png",
+        "ParticleTrail1.png",
+        "Glow.png"
+      ],
+      "problems": [
+        "wind zones / external forces are not simulated",
+        "world collisions use a ground plane at the effect origin (y = 0)"
+      ]
+    },
+    {
+      "name": "MobileExplosion3D_3",
+      "pack": "KriptoFX",
+      "kind": "particle-system",
+      "file": "KriptoFX/MobileExplosion3D_3/MobileExplosion3D_3.fx.json",
+      "source": "KriptoFX/Explosions/Prefabs/Mobile/MobileExplosion3D_3.prefab",
+      "looping": false,
+      "duration": 5,
+      "playTime": 6,
+      "fadeTime": 3,
+      "systems": [
+        {
+          "name": "MobileExplosion3D_3",
+          "capacity": 1000,
+          "output": "billboard"
+        },
+        {
+          "name": "Trails1",
+          "capacity": 1000,
+          "output": "stretched"
+        },
+        {
+          "name": "Trails2",
+          "capacity": 1000,
+          "output": "stretched"
+        },
+        {
+          "name": "Sparks",
+          "capacity": 1000,
+          "output": "stretched"
+        },
+        {
+          "name": "Particles",
+          "capacity": 1000,
+          "output": "billboard"
+        },
+        {
+          "name": "Glow",
+          "capacity": 1,
+          "output": "billboard"
+        }
+      ],
+      "params": [],
+      "lights": 1,
+      "files": [
+        "Explosion8.png",
+        "Trail5.png",
+        "Trail4.png",
+        "ParticleTrail1.png",
+        "RandomParticlesAlpha.png",
+        "Glow.png"
+      ],
+      "problems": [
+        "wind zones / external forces are not simulated",
+        "world collisions use a ground plane at the effect origin (y = 0)"
+      ]
+    },
+    {
+      "name": "MobileExplosion3D_4",
+      "pack": "KriptoFX",
+      "kind": "particle-system",
+      "file": "KriptoFX/MobileExplosion3D_4/MobileExplosion3D_4.fx.json",
+      "source": "KriptoFX/Explosions/Prefabs/Mobile/MobileExplosion3D_4.prefab",
+      "looping": false,
+      "duration": 5,
+      "playTime": 6,
+      "fadeTime": 4,
+      "systems": [
+        {
+          "name": "MobileExplosion3D_4",
+          "capacity": 1000,
+          "output": "billboard"
+        },
+        {
+          "name": "Core",
+          "capacity": 1000,
+          "output": "billboard"
+        },
+        {
+          "name": "Core2",
+          "capacity": 1000,
+          "output": "billboard"
+        },
+        {
+          "name": "Trails1",
+          "capacity": 1000,
+          "output": "stretched"
+        },
+        {
+          "name": "Trails2",
+          "capacity": 1000,
+          "output": "stretched"
+        },
+        {
+          "name": "Sparks",
+          "capacity": 1000,
+          "output": "stretched"
+        },
+        {
+          "name": "Particles",
+          "capacity": 1000,
+          "output": "billboard"
+        },
+        {
+          "name": "Glow",
+          "capacity": 1,
+          "output": "billboard"
+        }
+      ],
+      "params": [],
+      "lights": 1,
+      "files": [
+        "Explosion15.png",
+        "Explosion8.png",
+        "Trail5.png",
+        "Trail4.png",
+        "ParticleTrail1.png",
+        "RandomParticlesAlpha.png",
+        "Glow.png"
+      ],
+      "problems": [
+        "wind zones / external forces are not simulated",
+        "world collisions use a ground plane at the effect origin (y = 0)"
+      ]
+    },
+    {
+      "name": "MobileExplosion3D_5",
+      "pack": "KriptoFX",
+      "kind": "particle-system",
+      "file": "KriptoFX/MobileExplosion3D_5/MobileExplosion3D_5.fx.json",
+      "source": "KriptoFX/Explosions/Prefabs/Mobile/MobileExplosion3D_5.prefab",
+      "looping": false,
+      "duration": 5,
+      "playTime": 6,
+      "fadeTime": 3,
+      "systems": [
+        {
+          "name": "MobileExplosion3D_5",
+          "capacity": 1000,
+          "output": "billboard"
+        },
+        {
+          "name": "Trails1",
+          "capacity": 1000,
+          "output": "stretched"
+        },
+        {
+          "name": "Trails2",
+          "capacity": 1000,
+          "output": "stretched"
+        },
+        {
+          "name": "Sparks",
+          "capacity": 1000,
+          "output": "stretched"
+        },
+        {
+          "name": "Particles",
+          "capacity": 1000,
+          "output": "billboard"
+        },
+        {
+          "name": "Glow",
+          "capacity": 1,
+          "output": "billboard"
+        }
+      ],
+      "params": [],
+      "lights": 1,
+      "files": [
+        "Explosion5.png",
+        "Trail5.png",
+        "Trail6.png",
+        "ParticleTrail1.png",
+        "RandomParticlesAlpha.png",
+        "Glow.png"
+      ],
+      "problems": [
+        "wind zones / external forces are not simulated",
+        "world collisions use a ground plane at the effect origin (y = 0)"
+      ]
+    },
+    {
+      "name": "MobileExplosion5",
+      "pack": "KriptoFX",
+      "kind": "particle-system",
+      "file": "KriptoFX/MobileExplosion5/MobileExplosion5.fx.json",
+      "source": "KriptoFX/Explosions/Prefabs/Mobile/MobileExplosion5.prefab",
+      "looping": false,
+      "duration": 4.4,
+      "playTime": 4.8,
+      "fadeTime": 2.4,
+      "systems": [
+        {
+          "name": "Billboard",
+          "capacity": 1,
+          "output": "billboard"
+        },
+        {
+          "name": "Glow",
+          "capacity": 1,
+          "output": "billboard"
+        }
+      ],
+      "params": [],
+      "lights": 1,
+      "files": [
+        "Explosion5.png",
+        "Glow.png"
+      ],
+      "problems": []
+    },
+    {
+      "name": "MobileExplosion9",
+      "pack": "KriptoFX",
+      "kind": "particle-system",
+      "file": "KriptoFX/MobileExplosion9/MobileExplosion9.fx.json",
+      "source": "KriptoFX/Explosions/Prefabs/Mobile/MobileExplosion9.prefab",
+      "looping": false,
+      "duration": 4.4,
+      "playTime": 4.8,
+      "fadeTime": 2.4,
+      "systems": [
+        {
+          "name": "Billboard",
+          "capacity": 1,
+          "output": "billboard"
+        },
+        {
+          "name": "Glow",
+          "capacity": 1,
+          "output": "billboard"
+        }
+      ],
+      "params": [],
+      "lights": 1,
+      "files": [
+        "Explosion9.png",
+        "Glow.png"
+      ],
+      "problems": []
+    },
+    {
+      "name": "Assault Rifle MuzzleflashEmitter",
+      "pack": "PRO Effects FPS Muzzle flashes & Impacts",
+      "kind": "particle-system",
+      "file": "PRO Effects FPS Muzzle flashes & Impacts/Assault Rifle MuzzleflashEmitter/Assault Rifle MuzzleflashEmitter.fx.json",
+      "source": "PRO Effects FPS Muzzle flashes & Impacts/Shoot FX/Prefabs/Assault Rifle/Assault Rifle MuzzleflashEmitter.prefab",
+      "looping": false,
+      "duration": 7,
+      "playTime": 7,
+      "fadeTime": 2,
+      "systems": [
+        {
+          "name": "Muzzleflash",
+          "capacity": 15,
+          "output": "billboard"
+        },
+        {
+          "name": "Smoke",
+          "capacity": 100,
+          "output": "billboard"
+        },
+        {
+          "name": "Muzzleflash Light Particle",
+          "capacity": 1000,
+          "output": "none"
+        }
+      ],
+      "params": [],
+      "lights": 0,
+      "files": [
+        "muzzleflash_1_blurred.png",
+        "noise nm.png",
+        "noise.png",
+        "Smoke chanel sheet 1.png"
+      ],
+      "problems": [
+        "material Muzzleflash 1 uses Knife/MuzzleFlash: ported (no depth fade)",
+        "material Muzzleflash Smoke uses Knife/Particle Channel Packed: ported (no soft-particle depth fade; lighting is a fixed key light)"
+      ]
+    },
+    {
+      "name": "Electric Gun Impact",
+      "pack": "PRO Effects Sci fi FX",
+      "kind": "particle-system",
+      "file": "PRO Effects Sci fi FX/Electric Gun Impact/Electric Gun Impact.fx.json",
+      "source": "PRO Effects Sci fi FX/Prefabs/Electric Gun/Electric Gun Impact.prefab",
+      "looping": false,
+      "duration": 7,
+      "playTime": 5.5,
+      "fadeTime": 1.2,
+      "systems": [
+        {
+          "name": "Light Particle",
+          "capacity": 1000,
+          "output": "none"
+        },
+        {
+          "name": "Plasma Shockwave",
+          "capacity": 100,
+          "output": "billboard"
+        },
+        {
+          "name": "Distortion Out",
+          "capacity": 1,
+          "output": "none"
+        },
+        {
+          "name": "Small Lightnings Small",
+          "capacity": 1000,
+          "output": "none"
+        },
+        {
+          "name": "Explosion",
+          "capacity": 1000,
+          "output": "billboard"
+        },
+        {
+          "name": "Lightning Spawner",
+          "capacity": 1000,
+          "output": "none"
+        },
+        {
+          "name": "Small Lightnings Small",
+          "capacity": 1000,
+          "output": "none"
+        }
+      ],
+      "params": [],
+      "lights": 0,
+      "files": [
+        "muzzleflash_1_blurred.png",
+        "noise nm.png",
+        "noise.png",
+        "Shockwave.png",
+        "Smoke chanel sheet 1.png"
+      ],
+      "problems": [
+        "material Muzzleflash 1 uses Knife/MuzzleFlash: ported (no depth fade)",
+        "material Lightning Plasma Shockwave uses Knife/Particle Channel Packed: ported (no soft-particle depth fade; lighting is a fixed key light)",
+        "Distortion Out: distortion material Distortion Noise Ring (needs the scene behind it); not drawn",
+        "material Small Lightnings uses builtin:211; drawn as a plain textured particle",
+        "material Explosion Lightning uses Knife/Particle Channel Packed: ported (no soft-particle depth fade; lighting is a fixed key light)",
+        "world collisions use a ground plane at the effect origin (y = 0)"
+      ]
+    },
+    {
+      "name": "Lightning Impact",
+      "pack": "PRO Effects Sci fi FX",
+      "kind": "particle-system",
+      "file": "PRO Effects Sci fi FX/Lightning Impact/Lightning Impact.fx.json",
+      "source": "PRO Effects Sci fi FX/Prefabs/Lightning Gun/Lightning Impact.prefab",
+      "looping": false,
+      "duration": 7,
+      "playTime": 6,
+      "fadeTime": 1.2,
+      "systems": [
+        {
+          "name": "Muzzleflash",
+          "capacity": 15,
+          "output": "billboard"
+        },
+        {
+          "name": "Muzzleflash Light Particle",
+          "capacity": 1000,
+          "output": "none"
+        },
+        {
+          "name": "Sparks",
+          "capacity": 1000,
+          "output": "stretched"
+        },
+        {
+          "name": "Small Lightnings",
+          "capacity": 1000,
+          "output": "none"
+        },
+        {
+          "name": "Lightning Spawner",
+          "capacity": 1000,
+          "output": "none"
+        },
+        {
+          "name": "Small Lightnings Small",
+          "capacity": 1000,
+          "output": "none"
+        }
+      ],
+      "params": [],
+      "lights": 0,
+      "files": [
+        "9.png",
+        "noise nm.png",
+        "noise.png",
+        "muzzleflash_1_blurred.png"
+      ],
+      "problems": [
+        "material Muzzleflash 5 uses Knife/MuzzleFlash: ported (no depth fade)",
+        "material Muzzleflash 1 uses Knife/MuzzleFlash: ported (no depth fade)",
+        "world collisions use a ground plane at the effect origin (y = 0)",
+        "material Sparks Steel uses builtin:211; drawn as a plain textured particle",
+        "material Small Lightnings uses builtin:211; drawn as a plain textured particle"
+      ]
+    },
+    {
+      "name": "MissileFlame",
+      "pack": "Sci-Fi Effects",
+      "kind": "particle-system",
+      "file": "Sci-Fi Effects/MissileFlame/MissileFlame.fx.json",
+      "source": "Sci-Fi Effects/Effects/Missiles/MissileFlame.prefab",
+      "looping": true,
+      "duration": 7,
+      "playTime": 5.1,
+      "fadeTime": 0.1,
+      "systems": [
+        {
+          "name": "MissileFlame",
+          "capacity": 3000,
+          "output": "billboard"
+        }
+      ],
+      "params": [],
+      "lights": 0,
+      "files": [
+        "flames_flash_red.png"
+      ],
+      "problems": []
+    },
+    {
+      "name": "plasma_beam_muzzle_blue",
+      "pack": "Sci-Fi Effects",
+      "kind": "particle-system",
+      "file": "Sci-Fi Effects/plasma_beam_muzzle_blue/plasma_beam_muzzle_blue.fx.json",
+      "source": "Sci-Fi Effects/Effects/Plasma Beam/plasma_beam_muzzle_blue.prefab",
+      "looping": true,
+      "duration": 2.1,
+      "playTime": 0.4,
+      "fadeTime": 0.3,
+      "systems": [
+        {
+          "name": "plasma_beam_muzzle_blue",
+          "capacity": 1000,
+          "output": "billboard"
+        }
+      ],
+      "params": [],
+      "lights": 1,
+      "files": [
+        "plasma_beam_hit_blue.png"
+      ],
+      "problems": [
+        "material plasma_beam_flare_blue_002 uses Additive.shader; drawn as a plain textured particle (additive blend from its shader)"
+      ]
+    }
+  ]
+}
