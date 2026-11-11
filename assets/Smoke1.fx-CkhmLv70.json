@@ -1,0 +1,552 @@
+{
+ "format": 1,
+ "kind": "shuriken",
+ "name": "Smoke1",
+ "source": "Hovl Studio/3D Fire and Explosions/Prefabs/Smoke1.prefab",
+ "initialEvent": "OnPlay",
+ "params": [],
+ "expressions": [
+  {
+   "op": "Value",
+   "type": "matrix4",
+   "value": [
+    1,
+    0,
+    0,
+    0,
+    0,
+    6.123233995736766e-17,
+    1,
+    0,
+    0,
+    -1,
+    6.123233995736766e-17,
+    0,
+    0,
+    0,
+    0,
+    1
+   ]
+  },
+  {
+   "op": "DeltaTime"
+  },
+  {
+   "op": "Value",
+   "type": "matrix4",
+   "value": [
+    1,
+    0,
+    0,
+    0,
+    0,
+    1,
+    0,
+    0,
+    0,
+    0,
+    1,
+    0,
+    0,
+    0,
+    0,
+    1
+   ]
+  },
+  {
+   "op": "Value",
+   "type": "gradient",
+   "value": {
+    "mode": "blend",
+    "colors": [
+     {
+      "time": 0,
+      "color": [
+       1,
+       1,
+       1
+      ]
+     },
+     {
+      "time": 1,
+      "color": [
+       1,
+       1,
+       1
+      ]
+     }
+    ],
+    "alphas": [
+     {
+      "time": 0,
+      "alpha": 1
+     },
+     {
+      "time": 0.7459525444419013,
+      "alpha": 1
+     },
+     {
+      "time": 1,
+      "alpha": 0
+     }
+    ]
+   }
+  },
+  {
+   "op": "BakeGradient",
+   "args": [
+    3
+   ]
+  },
+  {
+   "op": "Value",
+   "type": "curve",
+   "value": {
+    "keys": [
+     {
+      "time": 0,
+      "value": 0.392548,
+      "inSlope": 0.60745203,
+      "outSlope": 0.60745203
+     },
+     {
+      "time": 1,
+      "value": 1,
+      "inSlope": 0.60745203,
+      "outSlope": 0.60745203
+     }
+    ],
+    "preWrap": 2,
+    "postWrap": 2
+   }
+  },
+  {
+   "op": "BakeCurve",
+   "args": [
+    5
+   ]
+  },
+  {
+   "op": "Value",
+   "type": "curve",
+   "value": {
+    "keys": [
+     {
+      "time": 0,
+      "value": 0,
+      "inSlope": 0,
+      "outSlope": 1
+     },
+     {
+      "time": 1,
+      "value": 1,
+      "inSlope": 1,
+      "outSlope": 0
+     }
+    ],
+    "preWrap": 2,
+    "postWrap": 2
+   }
+  },
+  {
+   "op": "BakeCurve",
+   "args": [
+    7
+   ]
+  },
+  {
+   "op": "Value",
+   "type": "curve",
+   "value": {
+    "keys": [
+     {
+      "time": 0,
+      "value": 0.0057373047,
+      "inSlope": 0.9932627,
+      "outSlope": 0.9932627
+     },
+     {
+      "time": 1,
+      "value": 0.999,
+      "inSlope": 0.9932627,
+      "outSlope": 0.9932627
+     }
+    ],
+    "preWrap": 2,
+    "postWrap": 2
+   }
+  },
+  {
+   "op": "BakeCurve",
+   "args": [
+    9
+   ]
+  }
+ ],
+ "events": [
+  {
+   "name": "OnPlay",
+   "play": [
+    0
+   ],
+   "stop": []
+  },
+  {
+   "name": "OnStop",
+   "play": [],
+   "stop": [
+    0
+   ]
+  }
+ ],
+ "systems": [
+  {
+   "kind": "particles",
+   "name": "Smoke1",
+   "capacity": 1000,
+   "attributes": [
+    {
+     "name": "position",
+     "type": "vec3",
+     "stored": true
+    },
+    {
+     "name": "velocity",
+     "type": "vec3",
+     "stored": true
+    },
+    {
+     "name": "age",
+     "type": "float",
+     "stored": true
+    },
+    {
+     "name": "lifetime",
+     "type": "float",
+     "stored": true
+    },
+    {
+     "name": "alive",
+     "type": "bool",
+     "stored": true
+    },
+    {
+     "name": "seed",
+     "type": "uint",
+     "stored": true
+    },
+    {
+     "name": "particleId",
+     "type": "uint",
+     "stored": true
+    },
+    {
+     "name": "startColor",
+     "type": "vec4",
+     "stored": true
+    },
+    {
+     "name": "startSize",
+     "type": "vec3",
+     "stored": true
+    },
+    {
+     "name": "angle",
+     "type": "vec3",
+     "stored": true
+    },
+    {
+     "name": "texStart",
+     "type": "float",
+     "stored": true
+    },
+    {
+     "name": "row",
+     "type": "float",
+     "stored": true
+    },
+    {
+     "name": "color",
+     "type": "vec3",
+     "stored": false
+    },
+    {
+     "name": "alpha",
+     "type": "float",
+     "stored": false
+    },
+    {
+     "name": "size3",
+     "type": "vec3",
+     "stored": false
+    },
+    {
+     "name": "frame",
+     "type": "float",
+     "stored": false
+    },
+    {
+     "name": "custom1",
+     "type": "vec4",
+     "stored": false
+    },
+    {
+     "name": "custom2",
+     "type": "vec4",
+     "stored": false
+    }
+   ],
+   "sourceAttributes": [],
+   "stages": {
+    "init": {
+     "uniforms": [
+      {
+       "name": "i_v0",
+       "type": "mat4",
+       "expr": 0
+      }
+     ],
+     "textures": [],
+     "defaults": {},
+     "functions": "",
+     "section": "vec3 sp = vec3(0.0);\nvec3 dir = vec3(0.0, 0.0, 1.0);\n{ float th = Rand(attributes.seed) * radians(360.0); float rr = sqrt(1.0 - 1.0 * Rand(attributes.seed));\n  vec2 n = vec2(cos(th), sin(th)) * rr;\n  sp = vec3(n * 0.1, 0.0);\n  dir = normalize(vec3(n * sin(radians(30.0)), cos(radians(30.0)))); }\nvec3 worldDir = normalize((vec4(dir, 0.0) * i_v0).xyz + vec3(0.0, 0.0, 1e-6));\nattributes.position = (vec4(sp, 1.0) * i_v0).xyz;\nattributes.velocity = worldDir * mix(2.0, 3.0, Rand(attributes.seed)) * 1.0;\nattributes.lifetime = max(mix(2.0, 4.0, Rand(attributes.seed)), 0.0001);\nattributes.startColor = vec4(0.18867922, 0.18867922, 0.18867922, 0.62352943);\nattributes.startSize = vec3(mix(4.0, 6.0, Rand(attributes.seed)));\nattributes.angle = vec3(0.0, 0.0, mix(0.0, 6.283185, Rand(attributes.seed)));\nattributes.texStart = 0.0;\nattributes.row = floor(Rand(attributes.seed) * 8.0);",
+     "events": [],
+     "sourceLoads": [],
+     "defines": {}
+    },
+    "update": {
+     "uniforms": [
+      {
+       "name": "u_DeltaTime",
+       "type": "float",
+       "expr": 1
+      },
+      {
+       "name": "u_v0",
+       "type": "mat4",
+       "expr": 2
+      }
+     ],
+     "textures": [],
+     "defaults": {},
+     "functions": "",
+     "section": "float dt = u_DeltaTime;\nfloat t = clamp(attributes.age / attributes.lifetime, 0.0, 1.0);\nfloat ageBefore = attributes.age;\nattributes.position += (attributes.velocity + vec3(0.0)) * dt;\nattributes.age += dt;\nif (attributes.age >= attributes.lifetime) attributes.alive = false;",
+     "events": [],
+     "sourceLoads": [],
+     "defines": {}
+    },
+    "output": {
+     "uniforms": [
+      {
+       "name": "o_v0",
+       "type": "float",
+       "expr": 4
+      },
+      {
+       "name": "o_v1",
+       "type": "vec4",
+       "expr": 6
+      },
+      {
+       "name": "o_v2",
+       "type": "vec4",
+       "expr": 8
+      },
+      {
+       "name": "o_v3",
+       "type": "vec4",
+       "expr": 10
+      }
+     ],
+     "textures": [],
+     "defaults": {},
+     "functions": "",
+     "section": "float t = clamp(attributes.age / max(attributes.lifetime, 1e-4), 0.0, 1.0);\nvec4 c = attributes.startColor;\nc *= SampleGradient(o_v0, t);\nattributes.color = c.rgb;\nattributes.alpha = c.a;\nvec3 s = attributes.startSize;\ns *= (1.0 * SampleCurve(o_v1, t));\nattributes.size3 = s * 1.0;\nfloat fr = fract(attributes.texStart + (0.9999 * SampleCurve(o_v2, t)) * 1.0) * 64.0;\nattributes.frame = fr;\nattributes.custom1 = vec4(0.0, (64.0 * SampleCurve(o_v3, t)), 0.0, 0.0);",
+     "events": [],
+     "sourceLoads": [],
+     "defines": {}
+    }
+   },
+   "spawner": {
+    "kind": "shuriken",
+    "duration": 1.5,
+    "looping": true,
+    "prewarm": true,
+    "startDelay": {
+     "mode": "constant",
+     "value": 0
+    },
+    "simulationSpeed": 1,
+    "rate": {
+     "mode": "constant",
+     "value": 10
+    },
+    "bursts": []
+   },
+   "output": {
+    "kind": "shuriken",
+    "mode": "billboard",
+    "alignment": "view",
+    "pivot": [
+     0,
+     0,
+     0
+    ],
+    "flip": [
+     0,
+     0,
+     0
+    ],
+    "lengthScale": 2,
+    "velocityScale": 0,
+    "cameraVelocityScale": 0,
+    "maxParticleSize": 32,
+    "sortingFudge": 0,
+    "sortingOrder": 0,
+    "applyColorSpace": false,
+    "flipbook": {
+     "tilesX": 8,
+     "tilesY": 8
+    },
+    "streams": [
+     0,
+     1,
+     3,
+     4,
+     32,
+     5,
+     8
+    ],
+    "systemRotation": [
+     1,
+     0,
+     0,
+     0,
+     0,
+     1,
+     0,
+     0,
+     0,
+     0,
+     1,
+     0,
+     0,
+     0,
+     0,
+     1
+    ],
+    "material": {
+     "code": "vec4 shadeFragment() {\n  vec4 t0 = (m_GlowColor * vec4(vTex0.z));\n  vec2 t1 = vec2(m_NoisespeedXYNoisepowerZGlowpowerW.x, m_NoisespeedXYNoisepowerZGlowpowerW.y);\n  vec2 t2 = (t1 / m_Noise_ST.xy);\n  vec2 t3 = (vec2(uTime) * t2);\n  vec2 t4 = (vTex0.xy * vec2(1.0, 1.0) + t3);\n  vec4 t5 = texture(m_Noise, t4);\n  vec4 t6 = (t5 * vec4(m_NoisespeedXYNoisepowerZGlowpowerW.z));\n  vec2 t7 = ((t6).xy / m_MainTex_ST.xy);\n  vec2 t8 = (t7 + (vTex0).xy);\n  vec4 t9 = texture(m_MainTex, t8);\n  vec2 t10 = (t7 + (vTex1).xy);\n  vec4 t11 = texture(m_MainTex, t10);\n  vec4 t12 = mix(t9, t11, vec4(vTex1.z));\n  vec4 t13 = abs(t12);\n  vec4 t14 = pow(abs(t13), vec4(m_NoisespeedXYNoisepowerZGlowpowerW.w));\n  vec4 t15 = (t0 * t14);\n  vec4 t16 = clamp(t15, vec4(0.0, 0.0, 0.0, 0.0), vec4(10000.0));\n  vec4 t17 = (t16 + t12);\n  vec4 t18 = (t17 * m_Color);\n  vec4 t19 = (t18 * vColor);\n  vec4 t20 = (t19 * vec4(m_FinalEmission));\n  float t21 = (t12.w * m_Color.w);\n  float t22 = (t21 * vColor.w);\n  float t23 = (1.0 * 500.0);\n  vec4 t24 = vec4(gl_FragCoord.xy / uViewport, 0.0, 1.0);\n  float t25 = (t23 - t24.w);\n  float t26 = (t25 / m_Depthpower);\n  float t27 = clamp(t26, 0.0, 1.0);\n  float t28 = step(t27, (vec4(0.0, 0.0, 0.0, 0.0)).x);\n  float t29 = mix(t27, (vec4(1.0, 1.0, 1.0, 1.0)).x, t28);\n  float t30 = (t22 * t29);\n  float t31 = ((m_Usedepth > 0.5) ? t30 : t22);\n  float t32 = (t31 * m_Opacity);\n  vec3 baseColor = (t20).xyz;\n  vec3 emission = (t20).xyz;\n  float alpha = t32;\n\n  return vec4(baseColor + emission, alpha);\n}",
+     "uniforms": [
+      {
+       "name": "m_GlowColor",
+       "type": "vec4",
+       "value": [
+        1,
+        1,
+        0,
+        1
+       ]
+      },
+      {
+       "name": "m_MainTex_ST",
+       "type": "vec4",
+       "value": [
+        1,
+        1,
+        0,
+        0
+       ]
+      },
+      {
+       "name": "m_Noise_ST",
+       "type": "vec4",
+       "value": [
+        8,
+        8,
+        0,
+        0
+       ]
+      },
+      {
+       "name": "m_NoisespeedXYNoisepowerZGlowpowerW",
+       "type": "vec4",
+       "value": [
+        0.314,
+        0.427,
+        0,
+        4
+       ]
+      },
+      {
+       "name": "m_Color",
+       "type": "vec4",
+       "value": [
+        1,
+        1,
+        1,
+        1
+       ]
+      },
+      {
+       "name": "m_FinalEmission",
+       "type": "float",
+       "value": 2
+      },
+      {
+       "name": "m_Depthpower",
+       "type": "float",
+       "value": 0.3
+      },
+      {
+       "name": "m_Usedepth",
+       "type": "float",
+       "value": 1
+      },
+      {
+       "name": "m_Opacity",
+       "type": "float",
+       "value": 1
+      }
+     ],
+     "textures": [
+      {
+       "name": "m_MainTex",
+       "key": "EmberExpl2.png",
+       "normal": false
+      },
+      {
+       "name": "m_Noise",
+       "key": "Noise34.png",
+       "normal": false
+      }
+     ],
+     "blend": {
+      "src": "SRC_ALPHA",
+      "dst": "ONE_MINUS_SRC_ALPHA"
+     },
+     "cull": false,
+     "depthWrite": false,
+     "shader": "HS_Explosion.shadergraph"
+    }
+   },
+   "maxLifetime": 4
+  }
+ ],
+ "lights": [],
+ "drawOrder": [
+  0
+ ],
+ "looping": true,
+ "duration": 3.5,
+ "fadeTime": 4,
+ "playTime": 5.5,
+ "textureInfo": {
+  "EmberExpl2.png": {
+   "srgb": true
+  },
+  "Noise34.png": {
+   "srgb": true
+  }
+ }
+}

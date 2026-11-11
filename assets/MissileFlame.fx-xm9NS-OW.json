@@ -1,0 +1,427 @@
+{
+ "format": 1,
+ "kind": "shuriken",
+ "name": "MissileFlame",
+ "source": "Sci-Fi Effects/Effects/Missiles/MissileFlame.prefab",
+ "initialEvent": "OnPlay",
+ "params": [],
+ "expressions": [
+  {
+   "op": "Value",
+   "type": "matrix4",
+   "value": [
+    -1,
+    0,
+    0,
+    0,
+    0,
+    1,
+    0,
+    0,
+    0,
+    0,
+    -1,
+    0,
+    0,
+    0,
+    0,
+    1
+   ]
+  },
+  {
+   "op": "DeltaTime"
+  },
+  {
+   "op": "Value",
+   "type": "matrix4",
+   "value": [
+    -1,
+    0,
+    0,
+    0,
+    0,
+    1,
+    0,
+    0,
+    0,
+    0,
+    -1,
+    0,
+    0,
+    0,
+    0,
+    1
+   ]
+  },
+  {
+   "op": "Value",
+   "type": "gradient",
+   "value": {
+    "mode": "blend",
+    "colors": [
+     {
+      "time": 0,
+      "color": [
+       1,
+       1,
+       1
+      ]
+     },
+     {
+      "time": 1,
+      "color": [
+       1,
+       1,
+       1
+      ]
+     }
+    ],
+    "alphas": [
+     {
+      "time": 0,
+      "alpha": 0
+     },
+     {
+      "time": 0.1117723353933013,
+      "alpha": 1
+     },
+     {
+      "time": 1,
+      "alpha": 0
+     }
+    ]
+   }
+  },
+  {
+   "op": "BakeGradient",
+   "args": [
+    3
+   ]
+  },
+  {
+   "op": "Value",
+   "type": "curve",
+   "value": {
+    "keys": [
+     {
+      "time": 0,
+      "value": 0,
+      "inSlope": 0,
+      "outSlope": 0
+     },
+     {
+      "time": 0.09667427,
+      "value": 0.93046826,
+      "inSlope": 0.0612676,
+      "outSlope": 0.0612676
+     },
+     {
+      "time": 1,
+      "value": 0,
+      "inSlope": -0.09966764,
+      "outSlope": -0.09966764
+     }
+    ],
+    "preWrap": 2,
+    "postWrap": 2
+   }
+  },
+  {
+   "op": "BakeCurve",
+   "args": [
+    5
+   ]
+  }
+ ],
+ "events": [
+  {
+   "name": "OnPlay",
+   "play": [
+    0
+   ],
+   "stop": []
+  },
+  {
+   "name": "OnStop",
+   "play": [],
+   "stop": [
+    0
+   ]
+  }
+ ],
+ "systems": [
+  {
+   "kind": "particles",
+   "name": "MissileFlame",
+   "capacity": 3000,
+   "attributes": [
+    {
+     "name": "position",
+     "type": "vec3",
+     "stored": true
+    },
+    {
+     "name": "velocity",
+     "type": "vec3",
+     "stored": true
+    },
+    {
+     "name": "age",
+     "type": "float",
+     "stored": true
+    },
+    {
+     "name": "lifetime",
+     "type": "float",
+     "stored": true
+    },
+    {
+     "name": "alive",
+     "type": "bool",
+     "stored": true
+    },
+    {
+     "name": "seed",
+     "type": "uint",
+     "stored": true
+    },
+    {
+     "name": "particleId",
+     "type": "uint",
+     "stored": true
+    },
+    {
+     "name": "startColor",
+     "type": "vec4",
+     "stored": true
+    },
+    {
+     "name": "startSize",
+     "type": "vec3",
+     "stored": true
+    },
+    {
+     "name": "angle",
+     "type": "vec3",
+     "stored": true
+    },
+    {
+     "name": "texStart",
+     "type": "float",
+     "stored": true
+    },
+    {
+     "name": "row",
+     "type": "float",
+     "stored": true
+    },
+    {
+     "name": "color",
+     "type": "vec3",
+     "stored": false
+    },
+    {
+     "name": "alpha",
+     "type": "float",
+     "stored": false
+    },
+    {
+     "name": "size3",
+     "type": "vec3",
+     "stored": false
+    },
+    {
+     "name": "frame",
+     "type": "float",
+     "stored": false
+    },
+    {
+     "name": "custom1",
+     "type": "vec4",
+     "stored": false
+    },
+    {
+     "name": "custom2",
+     "type": "vec4",
+     "stored": false
+    }
+   ],
+   "sourceAttributes": [],
+   "stages": {
+    "init": {
+     "uniforms": [
+      {
+       "name": "i_v0",
+       "type": "mat4",
+       "expr": 0
+      }
+     ],
+     "textures": [],
+     "defaults": {},
+     "functions": "",
+     "section": "vec3 sp = vec3(0.0);\nvec3 dir = vec3(0.0, 0.0, 1.0);\nvec3 worldDir = normalize((vec4(dir, 0.0) * i_v0).xyz + vec3(0.0, 0.0, 1e-6));\nattributes.position = (vec4(sp, 1.0) * i_v0).xyz;\nattributes.velocity = worldDir * mix(0.0, 0.0, Rand(attributes.seed)) * 1.0;\nattributes.lifetime = max(mix(0.016666668, 0.05, Rand(attributes.seed)), 0.0001);\nattributes.startColor = vec4(1.0, 1.0, 1.0, 1.0);\nattributes.startSize = vec3(mix(0.5, 0.78, Rand(attributes.seed)));\nattributes.angle = vec3(0.0, 0.0, mix(-6.283185, 6.283185, Rand(attributes.seed)));",
+     "events": [],
+     "sourceLoads": [],
+     "defines": {}
+    },
+    "update": {
+     "uniforms": [
+      {
+       "name": "u_DeltaTime",
+       "type": "float",
+       "expr": 1
+      },
+      {
+       "name": "u_v0",
+       "type": "mat4",
+       "expr": 2
+      }
+     ],
+     "textures": [],
+     "defaults": {},
+     "functions": "",
+     "section": "float dt = u_DeltaTime;\nfloat t = clamp(attributes.age / attributes.lifetime, 0.0, 1.0);\nfloat ageBefore = attributes.age;\nvec3 positionBefore = attributes.position;\nattributes.position += (attributes.velocity + vec3(0.0)) * dt;\nbool collided = false;\nattributes.age += dt;\nif (attributes.age >= attributes.lifetime) attributes.alive = false;",
+     "events": [],
+     "sourceLoads": [],
+     "defines": {}
+    },
+    "output": {
+     "uniforms": [
+      {
+       "name": "o_v0",
+       "type": "float",
+       "expr": 4
+      },
+      {
+       "name": "o_v1",
+       "type": "vec4",
+       "expr": 6
+      }
+     ],
+     "textures": [],
+     "defaults": {},
+     "functions": "",
+     "section": "float t = clamp(attributes.age / max(attributes.lifetime, 1e-4), 0.0, 1.0);\nvec4 c = attributes.startColor;\nc *= SampleGradient(o_v0, t);\nattributes.color = c.rgb;\nattributes.alpha = c.a;\nvec3 s = attributes.startSize;\ns *= (1.5115354 * SampleCurve(o_v1, t));\nattributes.size3 = s * 1.0;",
+     "events": [],
+     "sourceLoads": [],
+     "defines": {}
+    }
+   },
+   "spawner": {
+    "kind": "shuriken",
+    "duration": 5,
+    "looping": true,
+    "prewarm": false,
+    "startDelay": {
+     "mode": "constant",
+     "value": 0
+    },
+    "simulationSpeed": 1,
+    "rate": {
+     "mode": "constant",
+     "value": 500
+    },
+    "bursts": []
+   },
+   "output": {
+    "kind": "shuriken",
+    "mode": "billboard",
+    "alignment": "view",
+    "pivot": [
+     0,
+     0,
+     0
+    ],
+    "flip": [
+     0,
+     0,
+     0
+    ],
+    "lengthScale": 2,
+    "velocityScale": 0,
+    "cameraVelocityScale": 0,
+    "maxParticleSize": 50,
+    "sortingFudge": 0,
+    "sortingOrder": 0,
+    "applyColorSpace": false,
+    "flipbook": null,
+    "streams": [
+     0,
+     1,
+     3,
+     4
+    ],
+    "systemRotation": [
+     -1,
+     0,
+     0,
+     0,
+     0,
+     1,
+     0,
+     0,
+     0,
+     0,
+     -1,
+     0,
+     0,
+     0,
+     0,
+     1
+    ],
+    "material": {
+     "code": "vec4 shadeFragment() {\n  vec4 col = 2.0 * vColor * mTintColor * texture(mMainTex, vTex0.xy * mMainTex_ST.xy + mMainTex_ST.zw);\n  col.a = clamp(col.a, 0.0, 1.0);\n  return col;\n}",
+     "uniforms": [
+      {
+       "name": "mMainTex_ST",
+       "type": "vec4",
+       "value": [
+        1,
+        1,
+        0,
+        0
+       ]
+      },
+      {
+       "name": "mTintColor",
+       "type": "vec4",
+       "value": [
+        1,
+        1,
+        1,
+        1
+       ]
+      }
+     ],
+     "textures": [
+      {
+       "name": "mMainTex",
+       "key": "flames_flash_red.png"
+      }
+     ],
+     "blend": {
+      "src": "SRC_ALPHA",
+      "dst": "ONE"
+     },
+     "cull": false,
+     "depthWrite": false,
+     "shader": "builtin:200"
+    }
+   },
+   "maxLifetime": 0.05
+  }
+ ],
+ "lights": [],
+ "drawOrder": [
+  0
+ ],
+ "looping": true,
+ "duration": 7,
+ "fadeTime": 0.1,
+ "playTime": 5.1,
+ "textureInfo": {
+  "flames_flash_red.png": {
+   "srgb": true
+  }
+ }
+}

@@ -1,0 +1,1 @@
+const e={width:64,height:64,levels:6,levelHeight:.5,maxStep:1,scale:18,octaves:3,variance:.5,cliffs:.4,plateauScale:14,seaLevel:0,lakes:.67,lakeScale:22,snowPercent:12,dirtPercent:15,dirtScale:9,gravelPercent:6,sandPercent:6,redSandPercent:8,darkGrassPercent:25,sandRadius:1};export{e as m};
